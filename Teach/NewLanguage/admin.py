@@ -20,9 +20,9 @@ class LanguageAdmin(admin.ModelAdmin):
 class StudyMaterialAdmin(admin.ModelAdmin):
     #fields = ['stage','topic','text','audio',]
     model = StudyMaterial
-    list_display = ['stage','topic','text','audio',]
+    list_display = ['language','stage','topic','text','audio',]
     readonly_fields = ['date_created',]
-    list_filter = ['topic',]
+    list_filter = ['topic','language','stage']
     
 
 class AnswerOptionsAdmin(admin.StackedInline):

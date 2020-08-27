@@ -4,7 +4,7 @@ from django.views.generic import DetailView, ListView
 from django.contrib.auth import get_user_model
 
 from .forms import UserForm, ProfileForm
-from .models import Language, Stage
+from .models import Language, Stage, StudyMaterial, AnswerOptions, Result, Question
 User = get_user_model()
 # Create your views here.
 """@login_required
@@ -70,7 +70,7 @@ class StageList(ListView):
     """def get_object(self):
         return Language.objects.get(pk=self.kwargs['pk'])"""
 
-class StudyMaterial(DetailView):
+class StudyMaterialView(DetailView):
     model = Stage
     template_name = 'NewLanguage/study_material.html'
     context_object_name = 'material'
@@ -83,8 +83,8 @@ class StudyMaterial(DetailView):
         stage = Stage.objects.get(pk=self.kwargs['pk'])
         material = stage.studymaterial
         return material
-
-class Question(ListView):
+# Did this just incase a different page is needed for the Questions
+class QuestionView(ListView):
     model = StudyMaterial
     template_name = 'NewLanguage/questions.html'
     context_object_name = 'questions'
@@ -94,3 +94,17 @@ class Question(ListView):
         question = study.question_set.all()
         return question
 
+def answer(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        answers = question.answeroptions_set.get(pk=request.POST['answers'])
+    except (KeyError, AnswerOptions.DoesNotExist):
+        questions = QuestionView().get_queryset()
+        return render(request, 'NewLanguage/questions.html', {'questions':questions, 'error_message':'Select a choice for all questions'})
+    else:
+        result = Result(question=question, user=request.user)
+        for answer in answers :
+            if answer.is_correct:  
+                result.score += 1
+                result.save()
+        return redirect('NewLanguage:question', QuestionView().get_queryset)

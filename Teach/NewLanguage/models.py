@@ -40,7 +40,7 @@ class Stage(models.Model):
 
 class StudyMaterial(models.Model):
     stage = models.OneToOneField(Stage, on_delete=models.CASCADE)
-    #language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
     topic = models.CharField(_('Topic'), max_length=30)
     text = models.TextField(_('Topic Details'))
     audio = models.FileField(upload_to='media/audio', blank=True)
@@ -74,5 +74,5 @@ class AnswerOptions(models.Model):
 class Result(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    score = models.IntegerField(_('Score'), default=0 )
     objects = models.Manager()
-    #answer = models.

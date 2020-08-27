@@ -1,11 +1,19 @@
-{%block content%}
-{% load static %}
+{% if error_message %} <p><b>{{error_message}}</b></p>{% endif %}
+{% block content %}
 {% if questions %}
+    
     {% for question in questions %}
-        <p> {{question.study_studymaterial }}</p>
-        <p> {{ question.text }}</p>
-        <p>{{ question.answeroptions_set.all()}}</p>
-        <p>STAGE<a href="{% url 'NewLanguage:study_material' pk=stage.id %}">{{ stage.number }}</a></p>
+        
+        
+        <p>{{ question.text }}</p>
+        <form action="{% url 'NewLanguage:answer' question.id %}" method="post"></form>
+        {% csrf_token %}
+        {% for answers in question.answeroptions_set.all %}
+            <input type="radio" name="answers" id="answers{{forloop.counter}}" value="{{answers.option_text}}"> 
+            <label for="answers{{ forloop.counter}}"> {{answers.option_text}}</label><br>
+        {% endfor %}
     {% endfor %}
+    <input type="submit" value="Submit">
+        </form>
 {% endif %}
 {% endblock %}

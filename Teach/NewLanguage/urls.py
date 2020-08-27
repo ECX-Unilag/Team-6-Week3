@@ -13,6 +13,8 @@ urlpatterns = [
     #path('profile/', views.Profile.as_view(), name='profile'),
     path('profile/', views.profile, name='profile'),
     path('<int:pk>/', views.StageList.as_view(), name='stage_list'),
-    path('<int:pk>/study/', views.StudyMaterial.as_view(), name='study_material'),
-    path('<int:pk>/study/question/',views.Question.as_view(), name='question')
+    path('<int:pk>/study/', views.StudyMaterialView.as_view(), name='study_material'),
+    path('<int:pk>/study/question/',views.QuestionView.as_view(), name='question'),
+    path('<int:question_id>/study/question/answer/', views.answer, name='answer')
+    #path('<int:pk>/study/question/result', views.results, name='result'),
 ]

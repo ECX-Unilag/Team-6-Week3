@@ -6,4 +6,10 @@
     <p> {{ material.audio }}</p>
 {% endif %}
 {% endblock %}
-<p><a href="{% url 'NewLanguage:question' pk=material.id %}">{{ .number }}</a></p>
+<a href="{% url 'NewLanguage:question' material.id %}">Questions</a>
+{% comment "how it works" %}
+ The questions and the study material are in the same page.
+ It displays the topic and details of the studymaterial then the questions are 
+ gotten using the reverse relationship (ForeignKey)of the study material to the question
+and the options of each question is gotten using the reverse relationship
+{% endcomment %}
