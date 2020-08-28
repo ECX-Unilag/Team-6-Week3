@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/signin.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
     <script src="https://kit.fontawesome.com/ff8f230d9a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +26,7 @@
     <div class="main_box">
         <section id="navigation-bar">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../index.html">
                     <img class="nav-img" src="../assets/images/preaver.png" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -37,13 +38,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">How it works <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="./language.html">How it works <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="./signin.html">Login</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+                        onclick="window.location.href='./mainprofile.html'">
                         Get Started
                     </button>
                 </div>
@@ -73,7 +76,7 @@
                     <input id="password-field2" type="password" class="form-control" name="password" value="secret">
                     <span toggle2="#password-field" class="fa fa-fw fa-eye field-icon toggle-password2"></span>
                 </div>
-                <button class="log_button btn">Sign Up</button>
+                <button class="log_button btn" onclick="window.location.href='./gender.html'">>Sign Up</button>
 
             </form>
             <h6 class="divider text-center">OR</h6>

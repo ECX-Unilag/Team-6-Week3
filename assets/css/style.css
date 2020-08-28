@@ -168,6 +168,7 @@ button {
   opacity: 1;
   margin: 0 auto;
   margin-bottom: 4rem;
+  z-index: 2;
 }
 
 .illustration-img img {
@@ -196,8 +197,9 @@ h4 {
   margin-bottom: 4rem;
 }
 .success-stories {
-  margin: 3rem 8rem;
+  padding: 3rem 8rem;
   margin-bottom: 4rem;
+  z-index: 2;
 }
 .success_box {
   background-color: white;
@@ -207,6 +209,8 @@ h4 {
   border-radius: 10px;
   padding: 4rem 7vw;
   padding-top: 6rem;
+  z-index: 2;
+  position: relative;
 }
 .owl-dots {
   display: none;
