@@ -94,6 +94,15 @@ header > div {
   margin-top: auto;
   z-index: 0;
 }
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: none !important;
+  color: #FFF;
+  text-decoration: none;
+}
+.owl-theme .owl-nav [class*=owl-]:active {
+  border:none;
+  outline: none;
+}
 @media screen and (max-width: 1024px) {
   .second-container,
   .third-container {
