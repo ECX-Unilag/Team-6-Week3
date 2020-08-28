@@ -84,6 +84,25 @@ header > div {
 .second-text p {
   color: #131212;
 }
+.bar {
+  width: 100%;
+  height: 5px;
+  background-color: #c4c4c48c;
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  z-index: 0;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: none !important;
+  color: #FFF;
+  text-decoration: none;
+}
+.owl-theme .owl-nav [class*=owl-]:active {
+  border:none;
+  outline: none;
+}
 @media screen and (max-width: 1024px) {
   .second-container,
   .third-container {
@@ -98,7 +117,7 @@ header > div {
     margin-left: 8%;
   }
   .success-stories {
-    margin: 3rem 6rem;
+    padding: 3rem 6rem;
     margin-bottom: 4rem;
   }
   .story {
@@ -172,7 +191,7 @@ header > div {
     padding-bottom: 0;
   }
   .success-stories {
-    margin: 3rem 4.5rem;
+    padding: 3rem 4.5rem;
     margin-bottom: 4rem;
   }
   .story {
@@ -270,7 +289,7 @@ header > div {
     padding-bottom: 0;
   }
   .success-stories {
-    margin: 3rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
   .success_box {
     margin: 1.5rem 0;
@@ -280,7 +299,7 @@ header > div {
   }
   .story {
     padding: 0.7rem 0.7rem;
-    height: 9rem;
+    height: 7rem;
     bottom: 0;
   }
   .first-text, .first-text h1 {
