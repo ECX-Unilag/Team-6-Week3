@@ -28,16 +28,15 @@ NOTE: To navigate the Mobile UI
   Then Tap on “CLICK HERE TO SIGN IN”
   
   Then Tap on SIGN IN again and continue through.
- 
-The netlify hosting links of the  pages are as follow:-
 
-Landing page  
-https://team6-week3.netlify.app
+Front End Links are
+Landing Page : https://team6-week3.netlify.app
 
-
-https://team6-week3.netlify.app/pages/signin.html
-https://team6-week3.netlify.app/pages/signup.html
-https://team6-week3.netlify.app/pages/language.html
-https://team6-week3.netlify.app/pages/gender.html
-https://team6-week3.netlify.app/pages/forgot-password.html
+Sign In : https://team6-week3.netlify.app/pages/signin.html
+Sign Up : https://team6-week3.netlify.app/pages/signup.html
+Set language : https://team6-week3.netlify.app/pages/language.html
+Set gender : https://team6-week3.netlify.app/pages/gender.html
+Forgot Password : https://team6-week3.netlify.app/pages/forgot-password.html
+Learn page : https://team6-week3.netlify.app/pages/learn.html
+Courses Page : https://team6-week3.netlify.app/pages/mainprofile.html
 
