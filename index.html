@@ -7,16 +7,27 @@
   <title>Talku-Talku</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/ff8f230d9a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <!-- Page Preloader -->
+  <div class="loader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- End of Page Preloader -->
   <header>
     <section id="navigation-bar">
       <nav class="navbar navbar-expand-lg">
@@ -31,20 +42,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">How it works <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./pages/language.html">How it works <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="./pages/signin.html">Login</a>
             </li>
           </ul>
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+            onclick="window.location.href='./pages/signup.html'">
             Get Started
           </button>
         </div>
       </nav>
     </section>
     <div class="container-fluid intro-container d-flex align-items-center">
-      <div class="introduction col-lg-6">
+      <div class="introduction col-lg-6" id="landing">
         <div class="intro-text">
           <h1 class="hero- text">Learn Native Languages<br />at ease</h1>
           <h5 class="hero-subtext">Learn all languages for free across all devices.</h5>
@@ -61,65 +73,79 @@
     </div>
   </header>
 
-  <section class="second-container">
+  <section class="second-container position-relative">
+    <div class="bar position-absolute"></div>
     <div class="second-section">
       <div class="first-text">
         <h1 class="lead">Learn any language easily</h1>
       </div>
       <div class="second-text">
         <p>
-          Personalized Learning,Motivation,Multi-device access,<br />quick
+          Personalized Learning, Motivation, Multi-device access,<br />quick
           learning
         </p>
       </div>
     </div>
     <div class="illustration-container">
-      <div class="container-fluid row x-container">
-        <div class="first-row col-lg-6">
-          <div class="first-div x-container-item">
-            <img class="illustration-img" src="./assets/images/first-div.svg" />
-            <h4>Learn anywhere,anytime</h4>
-            <p>
-              Learn languages across all devices, pc, tablets<br />and mobile
-              phone,anywhere and anytime.
-            </p>
-          </div>
+      <div class="container-fluid x-container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-4 text-center">
+            <div class="x_item item1">
+              <div class="illustration-img">
+                <img src="./assets/images/first-div.svg" />
+              </div>
 
-          <div class="second-div x-container-item">
-            <img class="illustration-img" src="./assets/images/second-div.svg" />
-            <h4>Stay Motivated</h4>
-            <p>
-              Stay motivated by completing various daily tasks and earn points
-              to keep you going
-            </p>
+              <h4>Learn anywhere,anytime</h4>
+              <p>
+                Learn languages across all devices, pc, tablets and mobile
+                phone,anywhere and anytime.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div class="second-row col-lg-6">
-          <div class="third-div x-container-item">
-            <img class="illustration-img" src="./assets/images/third-div.svg" />
-            <h4>Learn in a Personalized Way</h4>
-            <p>
-              Learning with Talku-talku,you personalized your <br />learning
-              to your desires
-            </p>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-4 text-center">
+            <div class="x_item item2">
+              <div class="illustration-img">
+                <img src="./assets/images/third-div.svg" />
+              </div>
+              <h4>Learn in a Personalized Way</h4>
+              <p>
+                Learning with Talku-talku, you personalized your learning
+                to your desires
+              </p>
+            </div>
           </div>
-          <div class="fourth-div x-container-item">
-            <img class="illustration-img" src="./assets/images/fourth.svg" />
-            <h4>Improve Quickly</h4>
-            <p>
-              Learning with Talku-talku makes you learn faster and efficiently
-              with in weeks
-            </p>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-4 text-center">
+            <div class="x_item item3">
+              <div class="illustration-img">
+                <img src="./assets/images/second-div.svg" />
+              </div>
+              <h4>Stay Motivated</h4>
+              <p>
+                Stay motivated by completing various daily tasks and earn points
+                to keep you going
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-4 text-center">
+            <div class="x_item item4">
+              <div class="illustration-img">
+                <img src="./assets/images/fourth.svg" />
+              </div>
+              <h4>Improve Quickly</h4>
+              <p>
+                Learning with Talku-talku makes you learn faster and efficiently
+                with in weeks
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     </div>
   </section>
 
-  <section class="third-container">
+  <section class="third-container position-relative">
+    <div class="bar position-absolute"></div>
     <div class="third-section">
       <div class="first-text">
         <h1 class="lead">How it works</h1>
@@ -131,39 +157,50 @@
       </div>
     </div>
     <div class="instruction-container">
-      <div class="container-fluid row x-container">
-        <div class="x-container-item2">
-
-          <div class="col-lg-12 full-pane">
-            <div>
-              <img class="instruction-img" src="./assets/images/thirdsection3.svg">
+      <div class="container-fluid x-container">
+        <div class="w-100 instruction_rows text-center d-flex align-items-center">
+          <div class="instruction_row1 x_item">
+            <div class="instruction-img">
+              <img src="./assets/images/thirdsection3.svg">
             </div>
+          </div>
+          <div class="instruction_row2 x_item">
             <div>
               <h4>1. Download and SignUp</h4>
-              <p>Download Talku-Talku from various App stores or <br> sign up on our website,after downloading sign up
-                for
-                <br> free and get access to our tutorials</p>
+              <p>Download Talku-Talku from various App stores or sign up on our website,after downloading sign up
+                for free and get access to our tutorials</p>
             </div>
           </div>
-          <div class="col-lg-12 full-pane">
-            <div>
-              <h4>2. Select your preferred language to learn</h4>
-              <p>Select your preferred language you want to learn and start<br> learning instantly and of course learn
-                with fun </p>
-            </div>
-            <div>
-              <img class="instruction-img" src="./assets/images/thirdsection2.svg">
-            </div>
-          </div>
+        </div>
+        <div class="w-100 instruction_rows second_row text-center d-flex align-items-center">
+          <div class="instruction_row1 x_item">
 
-          <div class="col-lg-12 full-pane">
-            <div>
-              <img class="instruction-img" src="./assets/images/thirdsection1.svg">
-            </div>
             <div>
               <h4>2. Select your preferred language to learn</h4>
-              <p>Select your preferred language you want to learn and start<br> learning instantly and of course learn
+              <p>Select your preferred language you want to learn and start
+                learning instantly and of course learn
                 with fun </p>
+            </div>
+
+          </div>
+          <div class="instruction_row2 x_item">
+            <div class="instruction-img">
+              <img src="./assets/images/thirdsection2.svg">
+            </div>
+          </div>
+        </div>
+        <div class="w-100 instruction_rows text-center d-flex align-items-center">
+          <div class="instruction_row1 x_item">
+            <div class="instruction-img">
+              <img src="./assets/images/thirdsection1.svg">
+            </div>
+          </div>
+          <div class="instruction_row2 x_item">
+            <div>
+              <h4>3. Learn, learn and learn</h4>
+              <p>Get access to all languages, and you can choose
+                to learn any language anytime anyway at your desired time.
+              </p>
             </div>
           </div>
         </div>
@@ -187,8 +224,94 @@
       </div>
     </header>
 
-
   </section>
+  <div class="position-relative">
+    <div class="bar position-absolute"></div>
+    <section class="success-stories position-relative">
+
+      <div class="third-section">
+        <div class="first-text">
+          <h1 class="lead">How it works</h1>
+        </div>
+        <div class="second-text">
+          <p>
+            Learn languages with Talku-Talku
+          </p>
+        </div>
+      </div>
+      <div class="success_box">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/personpikin.png" alt="">
+            </div>
+            <div class="position-absolute story">
+              <h6>Olaoluwale Ajayi</h6>
+              <p>My first lesson was exactly as I was
+                hoping it would be. Intense, efficient and fun.</p>
+            </div>
+
+          </div>
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/Base.png" alt="">
+            </div>
+            <div class="position-absolute story">
+              <h6>Oluwadamilola Lasisi</h6>
+              <p>I’ve become better in actually understanding a language.
+                I know what to look for and what to focus on from
+                the things I’ve learned.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/Base2.png" alt="">
+            </div>
+            <div class="position-absolute story">
+              <h6>Seyi Olanipekun</h6>
+              <p>Using this platform is the best way for me to learn a new language.
+                Even though there are a lot of different platforms and options.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/personpikin.png" alt="">
+            </div>
+            <div class="position-absolute story">
+              <h6>Olaoluwale Ajayi</h6>
+              <p>My first lesson was exactly as I was
+                hoping it would be. Intense, efficient and fun.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/Base.png" alt="">
+            </div>
+
+            <div class="position-absolute story">
+              <h6>Seyi Olanipekun</h6>
+              <p>Using this platform is the best way for me to learn a new language.
+                Even though there are a lot of different platforms and options.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="story-img">
+              <img src="./assets/images/Base.png" alt="">
+            </div>
+            <div class="position-absolute story">
+              <h6>Seyi Olanipekun</h6>
+              <p>Using this platform is the best way for me to learn a new language.
+                Even though there are a lot of different platforms and options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
   <footer>
     <div class="top_footer">
       <div class="d-flex">
@@ -274,9 +397,14 @@
 
 
 
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/popper.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./sassets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/signin.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+
 </body>
 
 </html>

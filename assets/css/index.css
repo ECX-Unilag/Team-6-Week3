@@ -1,83 +1,395 @@
 .navbar-nav .nav-item {
   margin-right: 16px;
 }
-
 form.hire-button {
   border: none;
 }
-
 header > section,
 header > div {
   margin: 0 2rem 0 3rem;
 }
-
 .hire-button input {
   height: 54px;
   min-width: 15rem !important;
 }
-
 .hire-button input::placeholder {
   opacity: 0.5;
 }
-
 .hire-button button {
   padding: 0 25px;
   height: 50px;
   margin-right: 1px;
 }
-
 .intro-text {
   margin-bottom: 35px;
 }
-
 .intro-text h1 {
   margin-bottom: 30px;
 }
-
 .x-container {
-  
-  padding: unset;
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-  padding-right: 15px !important;
-  padding-left: 15px !important;
-  color: rgb(42, 40, 40);
+  color: #131212;
+  padding: 3rem 0;
 }
-.x-container-item,
-.x-container-item2 {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.x_item {
+  padding: 2rem 2rem;
 }
-
-.x-container-item2 > div {
-  display: flex;
-  align-items: center;
-  width: 100%;
+.item1, .item3 {
+  margin-right: 3.5rem;
 }
-
-.x-container-item2 .full-pane > div {
+.item2, .item4 {
+  margin-left: 3.5rem;
+}
+.x_item p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.instruction_rows {
+  margin: 2rem 0;
+}
+.instruction_row1, 
+.instruction_row2{
   width: 50%;
-  text-align: center;
 }
-
+.instruction_row1 img,
+.instruction_row2 img {
+  width: 100%;
+}
 .img-container {
   position: relative;
   text-align: center;
   color: white;
 }
+.story {
+  padding: 1rem 1.3rem;
+  height: 8rem;
+  bottom: 0;
+  background-color: #00000073;
+  text-align:center;
+  height: 10rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.story h6 {
+  font-size: 0.8rem ;
+  margin-bottom: 0.4rem;
+}
+.story p {
+  font-size: 0.7rem ;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  
+}
+.second-text p {
+  color: #131212;
+}
+.bar {
+  width: 100%;
+  height: 5px;
+  background-color: #c4c4c48c;
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  z-index: 0;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: none !important;
+  color: #FFF;
+  text-decoration: none;
+}
+.owl-theme .owl-nav [class*=owl-]:active {
+  border:none;
+  outline: none;
+}
+@media screen and (max-width: 1024px) {
+  .second-container,
+  .third-container {
+    padding: 0 6rem;
+  }
+  .intro-container.last {
+    padding-top: 14%;
+  }
+  .introduction {
+    line-height: 2;
+    font-size: 1.7rem;
+    margin-left: 8%;
+  }
+  .success-stories {
+    padding: 3rem 6rem;
+    margin-bottom: 4rem;
+  }
+  .story {
+    padding: 0.7rem 0.7rem;
+    height: 9rem;
+    bottom: 0;
 
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -22%);
-  background: rgb(19, 1, 1, 0.6);
-  width: 84%;
-  height: 40%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  }
+  .story h6 {
+    font-size: 0.7rem ;
+    margin-bottom: 0.6rem;
+  }
+  .story p {
+    font-size: 0.6rem ;
+    margin-bottom: 0.4rem;
+  }
+  .x_item {
+    padding: 1.6rem 1.6rem;
+  }
+  .item1, .item3 {
+    margin-right: 2.1rem;
+  }
+  
+  .item2, .item4 {
+    margin-left: 2.1rem;
+  }
+  .intro-text h1 {
+    margin-bottom: 2rem;
+  }
+  .introduction .hero-subtext {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .x_item p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+  .owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 17rem;
+    padding: 2px 5px;
+  }
+  .owl-next span {
+    font-size: 2rem;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .second-container,
+  .third-container {
+    padding: 0 4.5rem;
+  }
+  .intro-container.last {
+    padding-top: 14%;
+  }
+  .introduction {
+    line-height: 2;
+    font-size: 1.7rem;
+    margin-left: 8%;
+  }
+  .intro-container {
+    height: 700px;
+    padding-bottom: 0;
+  }
+  .success-stories {
+    padding: 3rem 4.5rem;
+    margin-bottom: 4rem;
+  }
+  .story {
+    padding: 0.7rem 0.7rem;
+    height: 9rem;
+    bottom: 0;
+  }
+  .story h6 {
+    font-size: 0.7rem ;
+    margin-bottom: 0.6rem;
+  }
+  .story p {
+    font-size: 0.6rem ;
+    margin-bottom: 0.4rem;
+  }
+  .x_item {
+    padding: 1.4rem 1.4rem;
+  }
+  .item1, .item3 {
+    margin-right: 0rem;
+  }
+  .nav-img {
+    margin-left: 0;
+  }
+  .item2, .item4 {
+    margin-left: 0rem;
+  }
+  .intro-text h1 {
+    margin-bottom: 2rem;
+  }
+  .introduction .hero-subtext {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .x_item p {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .owl-next span {
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
+  }
+  .illustration-img img {
+    height: 28vw;
+  }
+  .instruction_rows {
+    margin: 0rem 0;
+    flex-direction: column;
+  }
+  .instruction_row1, 
+  .instruction_row2 {
+    width: 100%;
+  }
+  .instruction_row1 img, 
+  .instruction_row2 img {
+    width: 80%;
+  }
+  .instruction_row1 {
+    padding-top: 0;
+  }
+  .second_row {
+    flex-direction: column-reverse;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+  .nav-item {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .second-container,
+  .third-container {
+    padding: 0 1.5rem;
+  }
+  .intro-container.last {
+    padding-top: 12%;
+  }
+  #landing {
+    margin-top: -4rem;
+  }
+  .introduction {
+    line-height: 2;
+    font-size: 1.7rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .intro-container {
+    height: 700px;
+    padding-bottom: 0;
+  }
+  .success-stories {
+    padding: 3rem 1.5rem;
+  }
+  .success_box {
+    margin: 1.5rem 0;
+    margin-top: 2.5rem;
+    padding: 4rem 5rem;
+    padding-top: 4rem;
+  }
+  .story {
+    padding: 0.7rem 0.7rem;
+    height: 7rem;
+    bottom: 0;
+  }
+  .first-text, .first-text h1 {
+    font-size: 1.6rem;
+  }
+  .story h6 {
+    font-size: 0.7rem ;
+    margin-bottom: 0.6rem;
+  }
+  .story p {
+    font-size: 0.6rem ;
+    margin-bottom: 0.4rem;
+  }
+  .x_item {
+    padding: 1.4rem 1.4rem;
+  }
+  .item1, .item3 {
+    margin-right: 0rem;
+  }
+  .nav-img {
+    margin-left: 0;
+  }
+  .item2, .item4 {
+    margin-left: 0rem;
+  }
+  .intro-text h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .introduction .hero-subtext {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .intro-container.last .introduction h1 {
+    margin-top: 4rem;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  .form-container {
+    margin-top: 35px;
+    padding: 0 2rem;
+  }
+  .hire-button {
+    margin: 0% 0% 0% 0%;
+  }
+  .hire-button input {
+    height: 44px;
+    width: 12rem !important;
+  }
+  .hire-button button {
+    padding: 0 25px;
+    height: 40px;
+    margin-right: 1px;
+  }
+  h4 {
+    font-size: 1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .x_item p {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .owl-next span {
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
+  }
+  .illustration-img img {
+    height: 28vw;
+  }
+  .instruction_rows {
+    margin: 0rem 0;
+    flex-direction: column;
+  }
+  .instruction_row1, 
+  .instruction_row2 {
+    width: 100%;
+  }
+  .instruction_row1 img, 
+  .instruction_row2 img {
+    width: 80%;
+  }
+  .instruction_row1 {
+    padding-top: 0;
+  }
+  .second_row {
+    flex-direction: column-reverse;
+  }
+  header > section, header > div {
+    margin: 0 1rem;
+  }
+  .navbar { padding:0.5rem 0 !important ; }
 }

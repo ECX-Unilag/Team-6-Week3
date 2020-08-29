@@ -18,6 +18,7 @@
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0;
+    color: #161515;
 }
 .one{
     transform: rotate(-90deg) translateX(-2.5rem);
@@ -42,6 +43,7 @@
 .bottom_footer {
     padding: 0.7rem 10vw;
     background-color:#2D93AD ;
+    
 }
 .bottom_footer p {
     margin-bottom: 0;
@@ -70,6 +72,7 @@
 }
 .top_footer form p {
     font-size: 0.9rem;
+    color: #4E4343;
 }
 .subscribe_button {
     padding-left: 0.7rem;
@@ -84,6 +87,7 @@
     height: 2rem;
 }
 .sub_area form {
+    border: none;
     display: block !important;
 }
 .footer_form {
@@ -183,4 +187,86 @@
     .top_footer {
         margin: 0.3rem 1rem;
     }
+}
+
+
+
+.loader {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+    background-color: #212121;
+    transition: all 0.8s;
+}
+/* ===== Preloader animation ====== */
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #2D93AD;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+.loader.done {
+	animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
 }

@@ -13,9 +13,19 @@
 </head>
 
 <body>
+    <!-- Page Preloader -->
+    <div class="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End of Page Preloader -->
     <section id="navigation-bar">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../index.html">
                 <img class="nav-img" src="../assets/images/preaver.png" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -24,16 +34,10 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">How it works <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                </ul>
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-                    Get Started
+
+                <button class="btn btn-outline-light ml-auto 
+                my-2 my-sm-0" type="submit" onclick="window.location.href='./learn.html'">>
+                    Go to Course
                 </button>
             </div>
         </nav>

@@ -7,7 +7,7 @@
 
 html,
 body {
-  background-color: #F2F8FA;
+  background-color: #F2F8FA !important;
   color: #fff;
   font-family: "Lato", "Arial", sans-serif;
   font-size: px;
@@ -114,8 +114,7 @@ button {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 0 6rem;
-  /* background-color: turquoise; */
+  padding: 0 8rem;
 }
 .second-section,
 .third-section {
@@ -163,59 +162,29 @@ button {
 .illustration-container,
 .instruction-container {
   background-color: white;
-  height: 750px;
   width: 100%;
   box-shadow: 0px 0px 10px #0000001a;
   border-radius: 10px;
   opacity: 1;
   margin: 0 auto;
   margin-bottom: 4rem;
-}
-.instruction-container.success-stories {
-  height: 350px;
-}
-.instruction-container.success-stories .carousel-item img {
-  height: 250px;
-  height: 250px;
+  z-index: 2;
 }
 
-.instruction-container.success-stories .x-container {
-  height: 100%;
-}
-.x-container-item3 #carouselExampleControls {
-  height: 100%;
-}
-.instruction-container.success-stories .carousel-item {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.instruction-container.success-stories .carousel-inner {
-  height: 100%;
-}
-.instruction-container.success-stories .carousel-item .img-container {
-  width: 30% !important;
-  height: 18rem !important;
-}
-.illustration-img {
-  width: 200px;
-  height: 200px;
+.illustration-img img {
+  height: 15vw;
 }
 .instruction-img {
-  width: 200px;
-  height: 250px;
-}
-
-.row {
-  padding-top: 10%;
+  width: 100%;
 }
 .second-div {
   padding-top: 50px;
 }
-
 h4 {
-  font-size: 30px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 .second-header {
   color: #fff;
@@ -226,4 +195,64 @@ h4 {
   width: 100%;
   background-attachment: fixed;
   margin-bottom: 4rem;
+}
+.success-stories {
+  padding: 3rem 8rem;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+.success_box {
+  background-color: white;
+  box-shadow: 0px 0px 10px #0000001a;
+  margin: 1.5rem 0;
+  margin-top: 2.5rem;
+  border-radius: 10px;
+  padding: 4rem 7vw;
+  padding-top: 6rem;
+  z-index: 2;
+  position: relative;
+}
+.owl-dots {
+  display: none;
+}
+.owl-carousel {
+  position: relative;
+}
+.owl-nav {
+  position: absolute;
+  position: absolute;
+    /* transform: translateY(-30vh); */
+    top: 0;
+    right: 0;
+    /* bottom: auto; */
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 100%;
+    margin-top: auto;
+    color: white;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 20rem;
+  /* margin: 1rem; */
+  height: 100%;
+  /* display: block !important; */
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transform: translateX(100%);
+}
+.owl-prev {
+  display: none !important;
+}
+.owl-next span {
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  line-height: 0;
+  margin-bottom: 0.5rem;
+  background-color: #2d93ad;
+  color: white;
+  border-radius: 50%;
 }

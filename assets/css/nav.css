@@ -22,5 +22,14 @@
   .nav-img {
     margin-left: 0px;
   }
+  .navbar-collapse {
+    text-align: center;
+  }
+  .nav-item {
+    margin: 1rem 0;
+  }
   
+}
+@media screen and (max-width: 568px) {
+  .navbar { padding:0.5rem 0 !important ; }
 }
