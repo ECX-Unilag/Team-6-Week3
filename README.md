@@ -5,13 +5,13 @@ Project Description: A Native Language Tutor, whereby users can learn various na
 
 Talku-Talku — The idea behind the name "Talk-Talku" comes from the word "Talk", when someone talks, and its a word know by all native in the country, imagine talking and understanding different native languages. 
 
-Talku-Talku - is an online language tutor that helps user learn various native languages, anytime, anywhere at their convenient time across all devices, with an appeling User Interface and interactive User Experience, which will get user engauged more.
+Talku-Talku - is an online language tutor that helps user learn various native languages, anytime, anywhere at their convenient time across all devices, with an appealing User Interface and interactive User Experience, which will get user engauged more.
 
 The Challenge
 The Challenge was to build native tutor for all languages across the country.
 
 The Solution
-Users find it hard to to understand and speak languages they dont know, but with Talku-Talku, users can now speak, understand and also read other native languages, with an appeling User Interface and interactive User Experience while using Talku-Talku, and also helping User to connect with themselves, by adding each other as friends and sharing their achievements while learning.
+Users find it hard to to understand and speak languages they dont know, but with Talku-Talku, users can now speak, understand and also read other native languages, with an appealing User Interface and interactive User Experience while using Talku-Talku, and also helping User to connect with themselves, by adding each other as friends and sharing their achievements while learning.
 
 Here are the links to the UI/UX Designs.
 
