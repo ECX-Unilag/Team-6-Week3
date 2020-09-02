@@ -1,0 +1,29 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="main_box">
+        <h2 class="main_heading text-center main_heading_two">Which Language Do You Want To learn?</h2>
+        <div class="log_form">
+            <form action="" class="form my-5 py-5" method="POST">
+                {% csrf_token %}
+                {% for language in languages %}
+                <div class="inputGroup">
+                    <input id="option{{ language.id }}" name="option{{ language.id }}" type="checkbox" value="{{ language.id }}" />
+                    <label for="option{{ language.id }}">{{ language.name }}</label>
+                </div>
+                {% endfor %}
+<!--                <div class="inputGroup">-->
+<!--                    <input id="option2" name="option2" type="checkbox" />-->
+<!--                    <label for="option2">Igbo</label>-->
+<!--                </div>-->
+<!--                <div class="inputGroup">-->
+<!--                    <input id="option3" name="option3" type="checkbox" />-->
+<!--                    <label for="option3">Hausa</label>-->
+<!--                </div>-->
+                <button class="log_button btn">Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+{% endblock content %}

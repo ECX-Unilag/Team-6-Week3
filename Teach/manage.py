@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Teach.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'talku_talku.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

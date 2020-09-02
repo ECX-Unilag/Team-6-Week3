@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+html,
+body {
+  background-color: #F2F8FA !important;
+  color: #fff;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html{
+    min-width:400px;
+}
+header {
+  color: #fff;
+  background-image: url("../images/Video.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-attachment: fixed;
+  margin-bottom: 4rem;
+}
+/* Nav-bar */
+#navigation-bar {
+  color: #fff;
+}
+.nav-link {
+  color: #fff;
+  padding: 0 18px;
+}
+.hire-button {
+  margin: 5% 3% 5% 0%;
+}
+.nav-img {
+  margin-left: 25px;
+}
+.intro-container {
+  height: 650px;
+  padding-bottom: 6rem;
+}
+.intro-container.last {
+  padding-top: 10%;
+}
+.introduction {
+  line-height: 2;
+  font-size: 2rem;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.introduction .hero-text {
+  font-size: 45px;
+}
+
+.intro-container.last .introduction h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.intro-container.last .introduction h5 {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.intro-container.last .introduction button {
+  padding: 8px 20px;
+  color: lightseagreen;
+}
+
+.introduction .hero-subtext {
+  font-size: 15px;
+}
+/* Form */
+.form-container {
+  margin-top: 35px;
+}
+form {
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  max-width: 30rem;
+
+  /* This bit draws the box around it */
+  border: 1px ridge white;
+  box-shadow: white 1px;
+  flex-grow: 1;
+
+  /* I've used padding so you can see the edges of the elements. */
+  padding: 1px;
+}
+
+input {
+  flex-grow: 1;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: 1px solid blue;
+  background: blue;
+  color: white;
+  right: 2px;
+}
+
+/*second container*/
+.second-container,
+.third-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 8rem;
+}
+.second-section,
+.third-section {
+  /* text-align: center;
+  display: inline-flex;
+  flex-flow: column;
+  */
+  width: 100%;
+}
+
+.first-text,
+.first-text h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.first-text h1.lead {
+  width: 90rem;
+}
+.first-text::before,
+.first-text::after {
+  display: inline-flex;
+  content: "";
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 1rem;
+  vertical-align: middle;
+}
+.second-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.lead {
+  font-size: 32px;
+}
+
+/* Illustration-container */
+
+.illustration-container,
+.instruction-container {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 0px 10px #0000001a;
+  border-radius: 10px;
+  opacity: 1;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+
+.illustration-img img {
+  height: 15vw;
+}
+.instruction-img {
+  width: 100%;
+}
+.second-div {
+  padding-top: 50px;
+}
+h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.second-header {
+  color: #fff;
+  background-image: url("../images/muhammad.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  width: 100%;
+  background-attachment: fixed;
+  margin-bottom: 4rem;
+}
+.success-stories {
+  padding: 3rem 8rem;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+.success_box {
+  background-color: white;
+  box-shadow: 0px 0px 10px #0000001a;
+  margin: 1.5rem 0;
+  margin-top: 2.5rem;
+  border-radius: 10px;
+  padding: 4rem 7vw;
+  padding-top: 6rem;
+  z-index: 2;
+  position: relative;
+}
+.owl-dots {
+  display: none;
+}
+.owl-carousel {
+  position: relative;
+}
+.owl-nav {
+  position: absolute;
+  position: absolute;
+    /* transform: translateY(-30vh); */
+    top: 0;
+    right: 0;
+    /* bottom: auto; */
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 100%;
+    margin-top: auto;
+    color: white;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 20rem;
+  /* margin: 1rem; */
+  height: 100%;
+  /* display: block !important; */
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transform: translateX(100%);
+}
+.owl-prev {
+  display: none !important;
+}
+.owl-next span {
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  line-height: 0;
+  margin-bottom: 0.5rem;
+  background-color: #2d93ad;
+  color: white;
+  border-radius: 50%;
+}

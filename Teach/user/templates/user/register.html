@@ -1,0 +1,30 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="main_box">
+        <h2 class="main_heading text-center">Sign Up</h2>
+        <div class="log_form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="log_button btn">Sign Up</button>
+            </form>
+            <h6 class="divider text-center">OR</h6>
+            <button class="btn facebook_button text-center">
+                <i class="fa fa-facebook text-white mr-4" aria-hidden="true"></i>
+                Facebook
+            </button>
+            <button class="btn google_btn text-center">
+                <img src="{% static 'user/images/google.png' %}" class="google_icon mr-4" alt="">
+                Google
+            </button>
+            <p class="help_text text-center">
+                By registering you accept our
+                <a href="#">terms</a>
+                and
+                <a href="#">conditions</a>
+            </p>
+        </div>
+    </div>
+{% endblock content %}

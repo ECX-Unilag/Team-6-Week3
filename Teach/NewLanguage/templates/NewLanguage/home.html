@@ -1,6 +1,0 @@
-{% if language_list %}
-    {% for language in language_list %}
-        <p><a href="{% url 'NewLanguage:stage_list' pk=language.id %}"> {{ language.name|upper}}</a></p>
-    {% endfor %}
-{% endif %}
-<a href="{% url 'NewLanguage:profile' %}"

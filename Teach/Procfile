@@ -1,0 +1,1 @@
+web: gunicorn talku_talku.wsgi

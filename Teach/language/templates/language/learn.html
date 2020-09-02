@@ -1,0 +1,59 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load custom_filter_tags %}
+{% block content %}
+<section class="content">
+        <div class="first-text">
+            <h1 class="lead">Learn</h1>
+        </div>
+    {% if not languages %}
+    <h2>You have not registered for any language</h2>
+    {% else %}
+    {% for language in languages %}
+        <div class="border-bottom mt-5">
+            <a href="{% url 'single' language.id %}" style="color:black;"><h1>{{ language.name }}</h1></a>
+        </div>
+        <div class="mt-2">
+            {% if language.brief_description %}
+            <p>Description: {{ language.brief_description|shrink }}...<a href="{% url 'single' language.id %}">Click to See Full Course</a></p>
+            {% endif %}
+        </div>
+        <div class="content_box d-flex">
+            <div class="content_box_one">
+
+                <div class="row">
+                    {% for stage in language.stage_set.all %}
+                    {% if forloop.counter < 4 %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 co-12 mb-4 c_box_cover">
+                        <h3>{{ stage.studymaterial.topic }}</h3>
+                        <a href="{% url 'study' stage.studymaterial.id %}">
+                            <div class="c_box">
+                                {{ stage.studymaterial.text|shrink }}...  <b> Click to learn</b>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% with progress=user.result_set.all|calculate:language %}
+            <div class="content_box_two">
+                <div class="top d-flex align-items-end">
+                    <div class="top_img_box">
+                        <img src="{% static 'user/images/illus.png' %}" alt="">
+                    </div>
+                    <h3 class="ml-1">Overall Progress</h3>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">{{ progress }}%</div>
+                </div>
+                <p>{{ progress }}%</p>
+            </div>
+            {% endwith %}
+        </div>
+        {% endfor %}
+    {% endif %}
+    </section>
+
+{% endblock content %}

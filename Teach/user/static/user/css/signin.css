@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* ==================================================== */
+/* ============== GENERAL BODY STYLES ================= */
+/* ==================================================== */
+:root {
+    --main-font : 'Lato', sans-serif;
+    --text-black : #000000;
+    --text-white : #ffffff;
+    --main-background : #F2F8FA;
+    --button-fill : #2D93AD;
+    --link-color : #2699FB;
+    --facebook-blue: #4C76BE;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+body {
+    background-color: var(--main-background);
+    
+}
+html {
+    scroll-behavior: smooth;
+    min-width:400px;
+  overflow-x: hidden;
+}
+/* ==================================================== */
+/* ================== ELEMENTS STYLES ================= */
+/* ==================================================== */
+
+.main_heading {
+    margin: 3rem 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.main_heading::before,
+.main_heading::after {
+    content: '';
+    width: 35%;
+    height: 1.5px;
+    background-color: #4E4343;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.main_heading::before{
+    margin-right: 4rem;
+}
+.main_heading::after{
+    margin-left: 4rem;
+}
+.main_heading_two::before,
+.main_heading_two::after {
+    width: 20%;
+}
+.log_form {
+    margin: 4rem auto;
+    max-width: 400px;
+}
+.form-control {
+    padding: 1.5rem 1rem;
+    background-color: var(--text-white) !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 6px #00000029 !important;
+    border: none !important;
+}
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+    box-shadow: 0px 0px 10px #14597929 !important;
+}
+label {
+    font-weight: 600;
+}
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -32px;
+    position: relative;
+    z-index: 4;
+    margin-right: 1rem;
+}
+.log_button, 
+.facebook_button,
+.google_btn {
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px !important;
+    margin: 1.6rem 0;
+    color: var(--text-white);
+}
+.log_button:hover, 
+.facebook_button:hover,
+.google_btn:hover{
+    box-shadow: 0px 0px 15px #00000029;
+}
+.log_button {
+    background-color: var(--button-fill);
+}
+.log_button:hover,
+.log_button:active,
+.log_button:focus {
+    background-color: var(--facebook-blue);
+    color: var(--text-white);
+}
+.facebook_button {
+    background-color: var(--facebook-blue);
+    color: var(--text-white);
+}
+.google_btn {
+    background-color: var(--text-white);
+    box-shadow: 0px 0px 6px #00000029;
+    color: var(--text-black);
+}
+.google_btn:hover,
+.google_btn:active,
+.google_btn:focus {
+    background-color: var(--facebook-blue);
+}
+.divider {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    width: 35%;
+    height: 1px;
+    background-color: #4E4343;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.divider::before{
+    margin-right: 12%;
+}
+.divider::after{
+    margin-left: 12%;
+}
+.google_icon {
+    height: 1.3rem;
+    margin-top: -3px;
+}
+.log_form a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+.log_form a:hover {
+    color: var(--facebook-blue);
+    text-decoration: none;
+}
+.forgot_p, .help_text {
+    font-size: 0.9rem;
+    color: #4E4343;
+}
+
+/* ========================================= */
+/* ========== Language Styles ============== */
+.inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 40px 0;
+    border-radius: 10px;
+    position: relative;
+}
+.inputGroup label {
+    padding: 10px 20px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+    font-size : 1rem;
+    box-shadow: 0px 0px 6px #00000029;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+}
+.inputGroup label:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    content: '';
+    background-color: #2D93AD;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+}
+
+.inputGroup label:after {
+    width: 32px;
+    height: 32px;
+    content: '';
+    border: 2px solid #D1D7DC;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+    border-radius: 5px;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+.inputGroup input:checked ~ label {
+    color: #fff;
+}
+.inputGroup input:checked ~ label:before {
+    transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+}
+.inputGroup input:checked ~ label:after {
+    background-color: #b81717;
+    border-color: #b81717;
+}
+.inputGroup input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+}
+@media screen and (max-width: 1024px) {
+    .main_heading_two {
+        font-size: 1.5rem;
+    }
+    .main_heading_two::before,
+    .main_heading_two::after {
+        width: 15% !important;
+    }
+    .main_heading_two::before{
+        margin-right: 7%;
+    }
+    .main_heading_two::after{
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_heading {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .main_heading::before,
+    .main_heading::after {
+        width: 25%;
+        margin-bottom: 4px;
+    }
+    .main_heading::before{
+        margin-right: 10%;
+    }
+    .main_heading::after{
+        margin-left: 10%;
+    }
+    .main_heading_two {
+        font-size: 1.5rem;
+    }
+    .main_heading_two::before,
+    .main_heading_two::after {
+        width: 5% !important;
+    }
+    .main_heading_two::before{
+        margin-right: 5%;
+    }
+    .main_heading_two::after{
+        margin-left: 5%;
+    }
+    .divider::before,
+    .divider::after {
+        width: 35%;
+        margin-bottom: 5px;
+    }
+    .divider::before{
+        margin-right: 10%;
+    }
+    .divider::after{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 568px) {
+    .main_heading_two {
+        margin: 1rem;
+    }
+    .main_heading_two::before,
+    .main_heading_two::after {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 428px) {
+    .log_form {
+        margin: 4rem 1.5rem;
+        max-width: 400px;
+    }
+    
+}

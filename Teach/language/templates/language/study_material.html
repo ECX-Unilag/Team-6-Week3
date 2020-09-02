@@ -1,0 +1,64 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load custom_filter_tags %}
+{% block content %}
+<section class="content">
+        <div class="first-text">
+            <h1 class="lead">Learn&nbsp&nbsp{{ material.stage.language.name }}</h1>
+        </div>
+        <div class="content_box d-flex">
+            <div class="content_box_one">
+                <h3>{{ material.topic }}</h3>
+                <div class="alphabet_box">
+                    {{ material.text|linebreaks }}
+                </div>
+        {% if material.audio %}
+            <div class="audio-div mt-4">
+                <h3 class="mb-3">Listen:</h3>
+                <audio src="{{ material.audio.url }}" controls>Audio element not supported by your browser</audio>
+            </div>
+        {% endif %}
+        <div class="questions mt-4">
+            <h3 class="mb-3">Questions:</h3>
+            <div class="question">
+                <form action="{% url 'analyze' material.id %}" method="POST">
+                    {% csrf_token %}
+                {% for question in material.question_set.all %}
+                    <p class="question-text">{{ forloop.counter }}. {{ question.text }}</p>
+                    {% if question.audio %}
+                    <div class="audio-div">
+                        <audio src="{{ question.audio.url }}" controls>Audio element not supported by your browser</audio>
+                    </div>
+                    {% endif %}
+                    {% with name=question.id %}
+                    {% for answer in question.answeroptions_set.all %}
+                        <div class="options">
+                        <label for="{{ answer.id }}">({{ forloop.counter|alphabet }}) {{ answer.options_text }}</label>
+                        <input type="radio" id="{{ answer.id }}" name="{{ name|string }}" value="{{ answer.id }}">
+                        </div>
+                    {% endfor %}
+                    {% endwith %}
+                {% endfor %}
+                    <button class="log_button btn mt-4">Submit</button>
+                    <p>{{ error }}</p>
+                </form>
+            </div>
+        </div>
+            </div>
+            <div class="content_box_two">
+                <div class="top d-flex align-items-end">
+                    <div class="top_img_box">
+                        <img src="{% static 'user/images/illus.png' %}" alt="">
+                    </div>
+                    <h3 class="ml-1">Course Progress</h3>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" {% if not result %} style="width:0%;"{% else %} style="width:{{ result.score }}%; {% endif %}aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">{% if not result %} 0% {% else %} {{ result.score }}% {% endif %}</div>
+                </div>
+                <p>{% if not result %} 0% {% else %} {{ result.score }}% {% endif %}</p>
+            </div>
+        </div>
+
+    </section>
+{% endblock content %}

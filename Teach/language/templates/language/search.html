@@ -1,0 +1,23 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load custom_filter_tags %}
+{% block content %}
+    <section class="content">
+        <div class="first-text">
+            <h1 class="lead">You&nbsp&nbspSearched&nbsp&nbspfor&nbsp&nbsp{{ query }}</h1>
+        </div>
+        {% for language in objects %}
+        <div class="border-bottom mt-5">
+            <a href="{% url 'single' language.id %}" style="color:black;"><h1>{{ language.name }}</h1></a>
+        </div>
+        <div class="mt-2">
+            {% if language.brief_description %}
+            <p>Description: {{ language.brief_description }}</p>
+            {% endif %}
+        </div>
+        <div class="links mt-3">
+            <a href="{% url 'register-single' language.id %}" class="btn btn-info mr-3">Click To Register</a>
+        </div>
+        {% endfor %}
+    </section>
+{% endblock content %}

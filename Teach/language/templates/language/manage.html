@@ -1,0 +1,44 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load custom_filter_tags %}
+{% block content %}
+<section class="content">
+{% if user.profile.languages.all %}
+        <div class="first-text">
+            <h1 class="lead">My&nbsp&nbspCourses</h1>
+        </div>
+        {% for course in user.profile.languages.all %}
+            <div class="mt-5">
+                <a href="{% url 'single' course.id %}" style="color:black;"> <h2>{{  course.name }}</h2></a>
+                {% with progress=user.result_set.all|calculate:course %}
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">{{ progress }}%</div>
+                </div>
+                {% endwith %}
+                <div class="links mt-3">
+                    <a href="{% url 'reset' course.id %}" class="btn btn-danger">Reset Progress</a>
+                    <a href="{% url 'remove' course.id %}" class="btn btn-info mr-3">Remove</a>
+                </div>
+            </div>
+        {% endfor %}
+{% endif %}
+
+
+{% if languages.count > user.profile.languages.count %}
+     <div class="first-text mt-5">
+            <h1 class="lead">Available&nbsp&nbspCourses</h1>
+        </div>
+    {% for language in languages %}
+        {% if language not in user.profile.languages.all %}
+             <div class="mt-5">
+                <a href="{% url 'register-single' language.id %}" style="color:black;"> <h2>{{ language.name }}</h2></a>
+                <div class="links mt-3">
+                    <a href="{% url 'add' language.id %}" class="btn btn-info mr-3">Add to My Courses</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</section>
+{% endblock content %}

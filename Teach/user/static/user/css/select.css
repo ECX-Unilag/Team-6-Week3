@@ -1,0 +1,21 @@
+.text-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.text-container > div {
+  padding: 2rem;
+}
+
+.x-container-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

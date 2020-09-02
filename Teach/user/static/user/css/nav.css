@@ -1,0 +1,35 @@
+/* Nav-bar */
+#navigation-bar {
+  color: #fff;
+}
+.nav-link {
+  color: #fff;
+  padding: 0 18px;
+}
+.hire-button {
+  margin: 5% 3% 5% 0%;
+}
+.nav-img {
+  margin-left: 25px;
+}
+.navbar {
+  background-color: #808080;
+}
+.navbar-toggler{
+  color: #39c6e9 !important;
+}
+@media screen and (max-width: 768px) {
+  .nav-img {
+    margin-left: 0px;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+  .nav-item {
+    margin: 1rem 0;
+  }
+  
+}
+@media screen and (max-width: 568px) {
+  .navbar { padding:0.5rem 0 !important ; }
+}

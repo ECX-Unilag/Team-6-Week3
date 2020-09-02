@@ -1,0 +1,45 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load custom_filter_tags %}
+{% block content %}
+    <section class="content">
+        <div class="first-text">
+            <h1 class="lead">Result</h1>
+        </div>
+        <div class="content_box d-flex">
+            <div class="content_box_one">
+                <h3>Answers</h3>
+                <div class="alphabet_box">
+                    {% for question in object.study_material.question_set.all %}
+                        <h4>Question {{ forloop.counter }}</h4>
+                        {% for option in question.answeroptions_set.all %}
+                            {% if option.is_correct %}
+                                <label>({{ forloop.counter|alphabet }}) {{ option.options_text }}&nbsp&nbsp</label><i class="fas fa-check" style="color: green;"></i><br>
+                                {% else %}
+                                <label>({{ forloop.counter|alphabet }}) {{ option.options_text }}&nbsp&nbsp</label><i class="fas fa-times" style="color: red;"></i><br>
+                                {% endif %}
+                            {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="mt-3">
+                    <a href="{% url 'single' object.study_material.stage.language.id %}" class="btn btn-primary">Continue Learning</a>
+                </div>
+
+            </div>
+            <div class="content_box_two">
+                <div class="top d-flex align-items-end">
+                    <div class="top_img_box">
+                        <img src="{% static 'user/images/illus.png' %}" alt="">
+                    </div>
+                    <h3 class="ml-1">Score</h3>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ object.score }}%;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">{{ object.score }}%</div>
+                </div>
+                <p>{{ object.score }}%</p>
+            </div>
+
+        </div>
+    </section>
+{% endblock content %}
