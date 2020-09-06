@@ -21,13 +21,13 @@ For the Mobile: https://xd.adobe.com/view/72b00a13-0a18-47a5-aeae-ac98c1bed664-2
 
 NOTE: To navigate the Mobile UI
 
-  Tap on the Splash to continue
+      Tap on the Splash to continue
   
-  Then tap through the Onboarding Slides
+      Then tap through the Onboarding Slides
   
-  Then Tap on “CLICK HERE TO SIGN IN”
+      Then Tap on “CLICK HERE TO SIGN IN”
   
-  Then Tap on SIGN IN again and continue through.
+      Then Tap on SIGN IN again and continue through.
 
 Front End Links are
 Landing Page : https://team6-week3.netlify.app
